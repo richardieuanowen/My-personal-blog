@@ -1,0 +1,105 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60vh 30vh 10vh;
+  grid-template-areas:
+    "blog blog blog"
+    "bar bar bar"
+    "ft ft ft";
+    grid-gap: 5px;
+    border: 1px solid yellow;
+}
+
+.box {
+  font-family: verdana;
+  border: 1px solid red;
+  background: #F8FA9D;
+}
+  .card {
+    grid-area: blog;
+  }
+
+  .meals {
+    grid-area: bar;
+  }
+
+  .footer {
+    grid-area: ft;
+  }
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60% 40%;
+  grid-template-areas:
+    "img"
+    "sum";
+  grid-gap: 5px;
+  border: 1px solid green;
+}
+
+  #image {
+    grid-area: img;
+    /* Add link to image here */
+  }
+
+  #blogbox {
+    grid-area: sum;
+    border-radius: 25px;
+  }
+
+  #button {
+    text-align: center;
+    width: 125px;
+    height: 50px;
+    border: 1px solid blue;
+    border-radius: 15px;
+  }
+
+/*
+.mealGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100vh;
+  grid-template-areas:
+    "box box box";
+  grid-gap: 15px;
+}
+
+
+.meal {
+  grid-area: bar;
+  width: 30vw;
+  height: 150px;
+  background-color: rgb(162,210,223); /* Ice Blue background */
+  border: 1px solid grey ; /* Thin grey border line */
+  padding: 20px ; /* Confirm padding */
+  border-radius: 25px;
+}
+
+/*
+  .breakfast {
+    /* Add link to breakfast image here */
+  }
+/*
+  .lunch {
+    /* Add link to lunch image here */
+  }
+/*
+  .tea {
+    /* Add link to lunch image here */
+  }
+/*
+#blogbox {
+  width: 100vw;
+  height: 100vh;
+  background-color: ; /* Add background color */
+  border: ; /* Confirm border size */
+  padding: 20px; /* Confirm padding */
+  border: 1px solid blue;
+  border-radius: 15px;
+}
+/*
+.link (
+  /* Add common style for links in the footer */
+  )
