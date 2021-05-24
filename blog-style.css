@@ -6,33 +6,9 @@
     "blog blog blog"
     "bar bar bar"
     "ft ft ft";
-    grid-gap: 5px;
-    border: 1px solid yellow;
+  grid-gap: 5px;
+  border: 1px solid yellow;
 }
-
-/* Dummy flexbox code
-.box {
-  font-family: verdana;
-  border: 1px solid red;
-  background: #F8FA9D;
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .meals {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: row;
-  }
-*/
-
 
 .box {
   font-family: verdana;
@@ -53,28 +29,27 @@
     flex-direction: row;
     grid-gap: 20px;
     font-size: 12px;
+        align-items: center;
   }
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 60% 40%;
+  /*grid-template-columns: repeat(3, 1fr);*/
+  grid-template-rows: 3fr 1fr;
   grid-template-areas:
     "a"
     "b";
   grid-gap: 5px;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   border: 1px solid green;
 }
 
   #image {
     grid-area:
       "a";
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    background-image: url("broccoli.jpg"); <!-- Photo by Annie Sprat, Unsplash-->
+    background-image: url("broccoli.jpg"); /* Photo by Annie Sprat, Unsplash */
+    align-self: center;
   }
 
   #blogbox {
@@ -82,8 +57,8 @@
     height: 100vh;*/
     grid-area:
       "b";
-    background-color: ; /* Add background color */
-    border: ; /* Confirm border size */
+    background-color: grey; /* Add background color */
+    border: blue; /* Confirm border size */
     padding: 20px; /* Confirm padding */
     border: 1px solid blue;
     border-radius: 15px;
@@ -96,28 +71,37 @@
     border: 1px solid blue;
     border-radius: 15px;
   }
+  #button1 {
+    float: right;
+    background-color: blue;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+  }
 
 .mealGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100%;
+  /*grid-template-rows: 1fr;*/
+  /*grid-template-rows: 100% 100% 100%;*/
+  grid-auto-rows: minmax(200px, 1fr);
   grid-template-areas:
     "c d e";
   grid-gap: 15px;
-  display: flex;
-  flex-direction: row;
+  /*display: flex;
+  flex-direction: row;*/
 }
 
 .meal {
-  grid-area: bar;
+  /*grid-area: bar;
   width: 100%;
-  height: 100%;
+  height: 100%;*/
   background-color: rgb(162,210,223); /* Ice Blue background */
   border: 5px solid grey ; /* Thin grey border line */
   padding: 20px ; /* Confirm padding */
   border-radius: 25px;
 }
-
 
   .breakfast {
     grid-area:
@@ -149,11 +133,56 @@
 }
 */
 
-a:link {
+.footer a:link {
   text-decoration: none;
   color: #333333;
 }
+/*
+#blogbox a:link {
+  float: right;
+  background-color: blue;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
 a:hover {
   font-weight: bold;
   color: blue;
 }
+*/
+.photos {
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /*object-fit: contain;*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*border-radius: 200px;*/
+  /*justify-content: center;*/
+}
+
+/* Dummy flexbox code
+.box {
+  font-family: verdana;
+  border: 1px solid red;
+  background: #F8FA9D;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meals {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+*/
