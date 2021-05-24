@@ -7,20 +7,25 @@
     "bar bar bar"
     "ft ft ft";
   grid-gap: 5px;
-  border: 1px solid yellow;
+  /*grid-gap: 10px;*/
+  border: 5px solid blue;
+  margin: 10px;
 }
 
 .box {
   font-family: verdana;
-  border: 1px solid red;
   background: #F8FA9D;
 }
   .card {
     grid-area: blog;
+    margin: 10px;
+    border: 3px solid red;
   }
 
   .meals {
     grid-area: bar;
+    margin: 10px;
+    border: 3px solid green;
   }
 
   .footer {
@@ -29,7 +34,9 @@
     flex-direction: row;
     grid-gap: 20px;
     font-size: 12px;
-        align-items: center;
+    align-items: center;
+    margin: 10px;
+    border: 3px solid purple;
   }
 
 .cardGrid {
@@ -42,35 +49,46 @@
   grid-gap: 5px;
   /*display: flex;
   flex-direction: column;*/
-  border: 1px solid green;
+  margin: 10px;
+  border: 3px solid green;
 }
 
   #image {
     grid-area:
       "a";
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
     background-image: url("broccoli.jpg"); /* Photo by Annie Sprat, Unsplash */
     align-self: center;
   }
 
   #blogbox {
-    /*width: 100vw;
-    height: 100vh;*/
+    width: 1fr;
+    height: 1fr;
     grid-area:
       "b";
     background-color: grey; /* Add background color */
     border: blue; /* Confirm border size */
     padding: 20px; /* Confirm padding */
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     border-radius: 15px;
   }
 
-  #button {
+  .button {
     text-align: center;
-    width: 125px;
+    float: right;
+    width: 100px;
     height: 50px;
     border: 1px solid blue;
-    border-radius: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
   }
+/*
   #button1 {
     float: right;
     background-color: blue;
@@ -79,13 +97,13 @@
     text-decoration: none;
     color: white;
   }
-
+*/
 .mealGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /*grid-template-rows: 1fr;*/
+  /*grid-template-rows: 100%;*/
   /*grid-template-rows: 100% 100% 100%;*/
-  grid-auto-rows: minmax(200px, 1fr);
+  grid-auto-rows: minmax(225px, 225px);
   grid-template-areas:
     "c d e";
   grid-gap: 15px;
@@ -94,19 +112,25 @@
 }
 
 .meal {
-  /*grid-area: bar;
-  width: 100%;
-  height: 100%;*/
+  /*grid-area: bar;*/
+  /*width: 1fr;
+  height: 1fr;*/
+  text-align: center;
   background-color: rgb(162,210,223); /* Ice Blue background */
-  border: 5px solid grey ; /* Thin grey border line */
-  padding: 20px ; /* Confirm padding */
-  border-radius: 25px;
+  border: 3px solid grey ; /* Thin grey border line */
+  margin: 10px;
+  padding: 2px ; /* Confirm padding */
+  border-radius: 15px;
+  color: white;
 }
 
   .breakfast {
     grid-area:
       "c";
-      /* Add link to breakfast image here */
+    /*width: 100%;
+    height: 100%;*/
+    background-image: url("dutch_pancake.jpg");
+    background-size: 100% 100%;
   }
 
   .lunch {
@@ -133,30 +157,28 @@
 }
 */
 
-.footer a:link {
-  text-decoration: none;
-  color: #333333;
-}
-/*
-#blogbox a:link {
+.button:link {
   float: right;
-  background-color: blue;
   padding: 12px;
   border-radius: 10px;
   text-decoration: none;
-  color: white;
+  color: #333333;
+}
+
+a:link {
+  float: right;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333333;
 }
 
 a:hover {
   font-weight: bold;
-  color: blue;
+  color: green;
 }
-*/
+
 .photos {
-  width: 50%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
   /*object-fit: contain;*/
   background-size: contain;
   background-repeat: no-repeat;
